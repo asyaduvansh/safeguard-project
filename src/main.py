@@ -26,6 +26,16 @@ if not os.path.exists(args.path):
     logging.error(f"Folder not found: {args.path}")
     sys.exit(1)
 
+# --- 🚨 SECURITY CHECK (Point 10) ---
+# Jasoos ko bolo folder ke andar .env file dhundhe
+env_file_rasta = os.path.join(args.path, ".env")
+
+if os.path.exists(env_file_rasta):
+    print(f"❌ SECURITY ALERT: '{args.path}' me .env file mil gayi!")
+    print("⚠️ Passwords leak hone ka khatra hai. Backup Cancelled.")
+    logging.critical(f"Security violation! .env file found in {args.path}. Aborting.")
+    sys.exit(1) # Emergency Brake lagao!
+
 # 4. Agar rasta mil gaya, toh BACKUP shuru karo!
 print(f"✅ Folder mil gaya: {args.path}. Zipping started...")
 logging.info(f"Starting backup for: {args.path}")
