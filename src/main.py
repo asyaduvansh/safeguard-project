@@ -43,7 +43,7 @@ logging.info(f"Starting backup for: {args.path}")
 # Backup file ka naam aaj ki date aur time se banayenge
 # Example: backup_2026-03-02_15-30-00
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-backup_filename = f"backup_{timestamp}"
+backup_filename = f"/home/sandeep-yaduvanshi/Desktop/cloud_school_mlops/backup_files/backup_{timestamp}"
 
 # shutil function ko 3 cheezein chahiye: 
 # 1. Zip file ka naam kya rakhna hai?
