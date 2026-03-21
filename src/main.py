@@ -55,8 +55,6 @@ print(f"🎉 SUCCESS: Backup saved as {backup_filename}.zip")
 logging.info(f"Backup completed successfully: {backup_filename}.zip")
 
 
-# ... (Tera purana zip banane wala code yahan upar hai) ...
-
 print("---------------------------------")
 print("🚀 Pushing backup to GitHub...")
 logging.info("Starting Git auto-push...")
