@@ -62,6 +62,7 @@ logging.info("Starting Git auto-push...")
 # Hum 'try' aur 'except' use karte hain taaki agar internet na ho 
 # ya git fail ho jaye, toh script crash na ho, balki ek clean error de.
 try:
+    
     # 1. Git Add (Cart me daalo)
     subprocess.run(["git", "add", "."], check=True)
     
